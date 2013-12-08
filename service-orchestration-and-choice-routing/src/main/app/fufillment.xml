@@ -91,7 +91,7 @@ return receipt;]]></scripting:text>
 			</scripting:script>
 		</scripting:transformer>
 		<rollback-exception-strategy doc:name="Rollback Exception Strategy" maxRedeliveryAttempts="3">
-			<logger doc:name="Logger" level="INFO" message="#[payload:]"/>
+			<logger doc:name="Logger" level="INFO" message="#[payload]"/>
 			<on-redelivery-attempts-exceeded doc:name="Redelivery exhausted">
 				<flow-ref doc:name="Invoke defaultErrorHandler" name="defaultErrorHandler"/>
 			</on-redelivery-attempts-exceeded>
