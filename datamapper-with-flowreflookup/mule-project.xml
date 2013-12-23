@@ -2,5 +2,5 @@
 <mule-project runtimeId="org.mule.tooling.server.3.4.2.ee" schemaVersion="3.5.0.0" xmlns="http://www.mulesoft.com/tooling/project">
     <name>datamapper-with-flowreflookup</name>
     <description>Demonstrates DataMapper's ability to reference an independent flow and easily extract, transform and map data.</description>
-    <muleExtension name="Salesforce" qualifier="org.mule.tooling.ui.contribution.sfdc.3.5.0"/>
+    <muleExtension name="Salesforce" qualifier="org.mule.tooling.ui.contribution.sfdc"/>
 </mule-project>
