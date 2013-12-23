@@ -2,5 +2,5 @@
 <mule-project runtimeId="org.mule.tooling.server.3.5.0.ee" schemaVersion="3.5.0.0" xmlns="http://www.mulesoft.com/tooling/project">
     <name>legacy-modernization</name>
     <description>Connects a a new HTTP order acceptance service to a legacy FTP fullfillment system.</description>
-    <muleExtension name="Salesforce" qualifier="org.mule.tooling.ui.contribution.sfdc"/>
+    <muleExtension name="Salesforce" qualifier="org.mule.tooling.ui.contribution.sfdc.3.5.0"/>
 </mule-project>
