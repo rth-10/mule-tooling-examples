@@ -5,8 +5,8 @@
     </spring:beans>
     <flow doc:name="SecurityClients" name="SecurityClients">
         <http:inbound-endpoint doc:name="HTTP Inbound Endpoint" exchange-pattern="request-response" host="localhost" path="client" port="63080"/>
-        <set-payload doc:name="Set payload with 'name' query param" value="#[message.inboundProperties['http.query.params']['name']]"/>
-        <set-variable doc:name="Set clientType" value="#[message.inboundProperties['http.query.params']['clientType']]" variableName="clientType"/>
+        <set-payload doc:name="Set payload with 'name' query param" value="#[message.inboundProperties.'http.query.params'.name]"/>
+        <set-variable doc:name="Set clientType" value="#[message.inboundProperties.'http.query.params'.clientType]" variableName="clientType"/>
         <choice doc:name="Choice">
             <when expression="#[clientType == 'unsecure']">
                 <flow-ref doc:name="Invoke unsecure sub-flow" name="unsecure"/>

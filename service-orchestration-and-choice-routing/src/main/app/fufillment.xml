@@ -119,7 +119,7 @@ return receipt;]]></scripting:text>
             <db:parameterized-query><![CDATA[insert into order_audits values(default, #[payload.orderId], #[totalValue])]]></db:parameterized-query>
         </db:insert>
 		<choice-exception-strategy doc:name="Choice Exception Strategy">
-			<rollback-exception-strategy doc:name="Rollback Exception Strategy" when="#[sessionVars['totalValue'] > 5000"/>
+			<rollback-exception-strategy doc:name="Rollback Exception Strategy" when="#[sessionVars.totalValue] > 5000"/>
 			<catch-exception-strategy doc:name="Catch Exception Strategy">
 				<flow-ref doc:name="Invoke defaultErrorHandler" name="defaultErrorHandler"/>
 			</catch-exception-strategy>
