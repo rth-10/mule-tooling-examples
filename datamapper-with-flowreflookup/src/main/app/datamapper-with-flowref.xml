@@ -15,7 +15,7 @@
     <flow doc:description="The script uses data in the state field to add a region to the payload according to location." doc:name="LookUpSalesRegionFlow" name="LookUpSalesRegionFlow">
         <scripting:component doc:name="Groovy">
             <scripting:script engine="Groovy"><![CDATA[def region = "UNKNOWN"
-def state = payload['state']
+def state = payload.state
 if (state != null) {
 	state = state.toUpperCase()
 }
