@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mule version="EE-3.5.0" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:core="http://www.mulesoft.org/schema/mule/core" xmlns:cxf="http://www.mulesoft.org/schema/mule/cxf" xmlns:data-mapper="http://www.mulesoft.org/schema/mule/ee/data-mapper" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:jbossts="http://www.mulesoft.org/schema/mule/jbossts" xmlns:jdbc="http://www.mulesoft.org/schema/mule/ee/jdbc" xmlns:jdbc-ee="http://www.mulesoft.org/schema/mule/ee/jdbc" xmlns:jersey="http://www.mulesoft.org/schema/mule/jersey" xmlns:jms="http://www.mulesoft.org/schema/mule/jms" xmlns:mulexml="http://www.mulesoft.org/schema/mule/xml" xmlns:scripting="http://www.mulesoft.org/schema/mule/scripting" xmlns:smtp="http://www.mulesoft.org/schema/mule/smtp" xmlns:spring="http://www.springframework.org/schema/beans" xmlns:vm="http://www.mulesoft.org/schema/mule/vm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=" http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd  http://www.mulesoft.org/schema/mule/cxf http://www.mulesoft.org/schema/mule/cxf/current/mule-cxf.xsd  http://www.mulesoft.org/schema/mule/jms http://www.mulesoft.org/schema/mule/jms/current/mule-jms.xsd  http://www.mulesoft.org/schema/mule/smtp http://www.mulesoft.org/schema/mule/smtp/current/mule-smtp.xsd  http://www.mulesoft.org/schema/mule/jersey http://www.mulesoft.org/schema/mule/jersey/current/mule-jersey.xsd  http://www.mulesoft.org/schema/mule/ee/data-mapper http://www.mulesoft.org/schema/mule/ee/data-mapper/current/mule-data-mapper.xsd  http://www.mulesoft.org/schema/mule/scripting http://www.mulesoft.org/schema/mule/scripting/current/mule-scripting.xsd  http://www.mulesoft.org/schema/mule/vm http://www.mulesoft.org/schema/mule/vm/current/mule-vm.xsd  http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd  http://www.mulesoft.org/schema/mule/jbossts http://www.mulesoft.org/schema/mule/jbossts/current/mule-jbossts.xsd  http://www.mulesoft.org/schema/mule/ee/jdbc http://www.mulesoft.org/schema/mule/ee/jdbc/current/mule-jdbc-ee.xsd  http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd  http://www.mulesoft.org/schema/mule/xml http://www.mulesoft.org/schema/mule/xml/current/mule-xml.xsd ">
+<mule xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns:db="http://www.mulesoft.org/schema/mule/db" version="EE-3.5.0" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:core="http://www.mulesoft.org/schema/mule/core" xmlns:cxf="http://www.mulesoft.org/schema/mule/cxf" xmlns:data-mapper="http://www.mulesoft.org/schema/mule/ee/data-mapper" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:jbossts="http://www.mulesoft.org/schema/mule/jbossts" xmlns:jdbc="http://www.mulesoft.org/schema/mule/ee/jdbc" xmlns:jdbc-ee="http://www.mulesoft.org/schema/mule/ee/jdbc" xmlns:jersey="http://www.mulesoft.org/schema/mule/jersey" xmlns:jms="http://www.mulesoft.org/schema/mule/jms" xmlns:mulexml="http://www.mulesoft.org/schema/mule/xml" xmlns:scripting="http://www.mulesoft.org/schema/mule/scripting" xmlns:smtp="http://www.mulesoft.org/schema/mule/smtp" xmlns:spring="http://www.springframework.org/schema/beans" xmlns:vm="http://www.mulesoft.org/schema/mule/vm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+http://www.mulesoft.org/schema/mule/cxf http://www.mulesoft.org/schema/mule/cxf/current/mule-cxf.xsd
+http://www.mulesoft.org/schema/mule/jms http://www.mulesoft.org/schema/mule/jms/current/mule-jms.xsd
+http://www.mulesoft.org/schema/mule/smtp http://www.mulesoft.org/schema/mule/smtp/current/mule-smtp.xsd
+http://www.mulesoft.org/schema/mule/jersey http://www.mulesoft.org/schema/mule/jersey/current/mule-jersey.xsd
+http://www.mulesoft.org/schema/mule/ee/data-mapper http://www.mulesoft.org/schema/mule/ee/data-mapper/current/mule-data-mapper.xsd
+http://www.mulesoft.org/schema/mule/scripting http://www.mulesoft.org/schema/mule/scripting/current/mule-scripting.xsd
+http://www.mulesoft.org/schema/mule/vm http://www.mulesoft.org/schema/mule/vm/current/mule-vm.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/jbossts http://www.mulesoft.org/schema/mule/jbossts/current/mule-jbossts.xsd
+http://www.mulesoft.org/schema/mule/ee/jdbc http://www.mulesoft.org/schema/mule/ee/jdbc/current/mule-jdbc-ee.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/xml http://www.mulesoft.org/schema/mule/xml/current/mule-xml.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd">
 	<http:connector doc:name="HTTP\HTTPS" name="HttpConnector"/>
 	<jms:activemq-xa-connector brokerURL="vm://localhost" doc:name="Active MQ" name="Active_MQ" validateConnections="true"/>
 	<cxf:configuration doc:description="Global CXF Configuration" doc:name="CXF Configuration" initializeStaticBusInstance="false"/>
@@ -11,7 +26,6 @@
 			<spring:property name="url" value="jdbc:derby:muleEmbeddedDB;create=true"/>
 		</spring:bean>
 	</spring:beans>
-	<jdbc-ee:connector dataSource-ref="Derby_Data_Source" doc:name="Database" name="JDBCConnector" pollingFrequency="0" queryTimeout="-1" validateConnections="true"/>
 	<jbossts:transaction-manager doc:name="Transaction Manager">
 		<property key="com.arjuna.ats.arjuna.coordinator.defaultTimeout" value="600"/>
 		<property key="com.arjuna.ats.arjuna.coordinator.txReaperTimeout" value="1000000"/>
@@ -23,6 +37,7 @@
 		<mulexml:namespace prefix="soap" uri="http://schemas.xmlsoap.org/soap/envelope/"/>
 		<mulexml:namespace prefix="ord" uri="http://orders.se.mulesoft.com/"/>
 	</mulexml:namespace-manager>
+    <db:generic-config name="Generic_Database_Configuration" dataSource-ref="Derby_Data_Source" doc:name="Generic Database Configuration"/>
 	<flow doc:name="orderService" name="orderService">
 		<http:inbound-endpoint connector-ref="HttpConnector" doc:description="Process HTTP reqests or responses." doc:name="/orders" exchange-pattern="request-response" host="localhost" path="orders" port="1080"/>
 		<cxf:jaxws-service doc:description="Make a web service available via CXF" doc:name="Order WebService" serviceClass="com.mulesoft.se.orders.IProcessOrder"/>
@@ -56,7 +71,7 @@
 		<catch-exception-strategy doc:name="Catch Exception Strategy">
 			<scripting:transformer doc:name="Create REJECTED PurchaseReceipt">
 				<scripting:script engine="groovy">
-					<scripting:text><![CDATA[def receipt = new com.mulesoft.se.orders.PurchaseReceipt(); 
+                    <scripting:text><![CDATA[def receipt = new com.mulesoft.se.orders.PurchaseReceipt(); 
 receipt.setStatus(com.mulesoft.se.orders.Status.REJECTED); receipt.setTotalPrice(0);
 return receipt;]]></scripting:text>
 				</scripting:script>
@@ -78,15 +93,14 @@ return receipt;]]></scripting:text>
 				<object-to-string-transformer doc:name="Object to String"/>
 			</ee:cache>
 		</enricher>
-		<jdbc-ee:outbound-endpoint connector-ref="JDBCConnector" doc:name="Save Order Item" exchange-pattern="one-way" queryKey="insertOrder" queryTimeout="-1">
-			<xa-transaction action="ALWAYS_JOIN"/>
-			<jdbc-ee:query key="insertOrder" value="insert into orders (product_id, name, manufacturer, quantity, price) values (#[payload.productId], #[payload.name], #[payload.manufacturer], #[payload.quantity], #[price])"/>
-		</jdbc-ee:outbound-endpoint>
+        <db:insert config-ref="Generic_Database_Configuration" doc:name="Save Order Item" transactionalAction="ALWAYS_JOIN">
+            <db:parameterized-query><![CDATA[insert into orders (product_id, name, manufacturer, quantity, price) values (#[payload.productId], #[payload.name], #[payload.manufacturer], #[payload.quantity], #[price])]]></db:parameterized-query>
+        </db:insert>
 		<set-variable doc:name="totalPrice = price * payload.quantity" value="#[price * payload.quantity]" variableName="totalPrice"/>
 		<set-session-variable doc:name="totalValue += totalPrice" value="#[totalValue + totalPrice]" variableName="totalValue"/>
 		<scripting:transformer doc:name="Groovy">
 			<scripting:script engine="Groovy">
-				<scripting:text><![CDATA[receipt = new com.mulesoft.se.orders.PurchaseReceipt(); receipt.setStatus(com.mulesoft.se.orders.Status.ACCEPTED); receipt.setTotalPrice(Float.valueOf(message.getInvocationProperty('totalPrice'))); 
+                <scripting:text><![CDATA[receipt = new com.mulesoft.se.orders.PurchaseReceipt(); receipt.setStatus(com.mulesoft.se.orders.Status.ACCEPTED); receipt.setTotalPrice(Float.valueOf(message.getInvocationProperty('totalPrice'))); 
 return receipt;]]></scripting:text>
 			</scripting:script>
 		</scripting:transformer>
@@ -101,10 +115,9 @@ return receipt;]]></scripting:text>
 		<vm:inbound-endpoint doc:name="audit" exchange-pattern="one-way" mimeType="text/plain" path="audit" responseTimeout="10000">
 			<xa-transaction action="ALWAYS_BEGIN"/>
 		</vm:inbound-endpoint>
-		<jdbc-ee:outbound-endpoint connector-ref="JDBCConnector" doc:name="Save OrderSummary" exchange-pattern="one-way" mimeType="text/plain" queryKey="insertOrderSummary" queryTimeout="-1" responseTimeout="10000">
-			<xa-transaction action="ALWAYS_JOIN"/>
-			<jdbc-ee:query key="insertOrderSummary" value="insert into order_audits values(default, #[payload.orderId], #[totalValue])"/>
-		</jdbc-ee:outbound-endpoint>
+        <db:insert config-ref="Generic_Database_Configuration" doc:name="Save OrderSummary">
+            <db:parameterized-query><![CDATA[insert into order_audits values(default, #[payload.orderId], #[totalValue])]]></db:parameterized-query>
+        </db:insert>
 		<choice-exception-strategy doc:name="Choice Exception Strategy">
 			<rollback-exception-strategy doc:name="Rollback Exception Strategy" when="#[sessionVars['totalValue'] > 5000"/>
 			<catch-exception-strategy doc:name="Catch Exception Strategy">
@@ -131,7 +144,7 @@ return receipt;]]></scripting:text>
 		<http:inbound-endpoint connector-ref="HttpConnector" doc:name="HTTP" exchange-pattern="request-response" host="localhost" path="populate" port="8091"/>
 		<scripting:component doc:name="Create Tables">
 			<scripting:script engine="Groovy">
-				<scripting:text><![CDATA[jdbcConnector = muleContext.getRegistry().lookupConnector("JDBCConnector");
+                <scripting:text><![CDATA[jdbcConnector = muleContext.getRegistry().lookupConnector("JDBCConnector");
 qr = jdbcConnector.getQueryRunner();
 conn = jdbcConnector.getConnection();
 qr.update(conn, "CREATE TABLE orders (i int generated always as identity, product_id varchar(256), name varchar(256), manufacturer varchar(256), quantity integer, price integer)");
