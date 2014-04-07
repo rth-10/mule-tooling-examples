@@ -12,7 +12,7 @@
 
     <modules>
         <module>connect-with-salesforce</module>
-        <module>datamapper-with-flowreflookup</module>
+        <module>web-service-consumer</module>
         <module>foreach-processing-and-choice-routing</module>
         <module>hello-world</module>
         <module>http-request-response-with-logger</module>
