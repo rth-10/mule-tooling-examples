@@ -12,6 +12,7 @@
 
     <modules>
         <module>connect-with-salesforce</module>
+        <module>salesforce-to-database</module>
         <module>web-service-consumer</module>
         <module>foreach-processing-and-choice-routing</module>
         <module>hello-world</module>
