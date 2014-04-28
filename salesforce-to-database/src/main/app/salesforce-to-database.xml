@@ -22,11 +22,9 @@
             <batch:step name="Batch_Step1">
                 <data-mapper:transform config-ref="contact_to_map" doc:name="Contact To Map"/>
                 <enricher doc:name="Message Enricher">
-                    <processor-chain doc:name="Processor Chain">
                         <db:select config-ref="MySQL_Configuration" doc:name="Check existence in Database">
                             <db:parameterized-query><![CDATA[SELECT first_name,last_name,email FROM contact WHERE email=#[payload.email]]]></db:parameterized-query>
                         </db:select>
-                    </processor-chain>
                     <enrich source="#[payload.size() > 0]" target="#[recordVars['exists']]"/>
                     <enrich source="#[payload]" target="#[recordVars['dbRecord']]"/>
                 </enricher>
