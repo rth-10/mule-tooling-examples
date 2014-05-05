@@ -13,8 +13,8 @@
         <batch:threading-profile poolExhaustedAction="WAIT"/>
         <batch:input>
             <poll doc:name="Poll">
-                <fixed-frequency-scheduler frequency="100000" startDelay="10" timeUnit="MINUTES"/>
-                <watermark default-expression="#['2003-12-11T14:16:00.000Z']" selector="MAX" selector-expression="#[payload.LastModifiedDate]" variable="timestamp"/>
+                <fixed-frequency-scheduler frequency="30" startDelay="10" timeUnit="MINUTES"/>
+                <watermark default-expression="#['1900-12-11T14:16:00.000Z']" selector="MAX" selector-expression="#[payload.LastModifiedDate]" variable="timestamp"/>
                 <sfdc:query config-ref="Salesforce_Configuration" doc:name="Query Salesforce" query="dsql:SELECT Email,FirstName,LastModifiedDate,LastName FROM Contact WHERE LastModifiedDate > #[flowVars['timestamp']]"/>
             </poll>
         </batch:input>
@@ -42,7 +42,7 @@
                         </db:update>
                     </when>
                     <otherwise>
-                        <logger doc:name="Logger" level="INFO" message="Contact #[payload.email] already exists in db"/>
+                        <logger doc:name="Logger" level="INFO" message="Error with #[payload.email] contact"/>
                     </otherwise>
                 </choice>
             </batch:step>
