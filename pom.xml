@@ -7,7 +7,7 @@
 
     <groupId>org.mule.tooling.examples</groupId>
     <artifactId>org.mule.tooling.examples</artifactId>
-    <version>3.5.0-M5-SNAPSHOT</version>
+    <version>3.5.0</version>
     <packaging>pom</packaging>
 
     <modules>
