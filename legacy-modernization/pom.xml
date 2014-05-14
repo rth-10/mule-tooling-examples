@@ -9,6 +9,6 @@
     <parent>
         <groupId>org.mule.tooling.examples</groupId>
         <artifactId>org.mule.tooling.examples</artifactId>
-        <version>3.5.0</version>
+        <version>3.6.0-M1-SNAPSHOT</version>
     </parent>
 </project>
