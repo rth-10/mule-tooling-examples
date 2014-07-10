@@ -7,7 +7,7 @@
 
     <groupId>org.mule.tooling.examples</groupId>
     <artifactId>org.mule.tooling.examples</artifactId>
-    <version>3.5.1-SNAPSHOT</version>
+    <version>3.5.1</version>
     <packaging>pom</packaging>
 
     <modules>
@@ -33,7 +33,7 @@
         <jdk.version>1.6</jdk.version>
         <muleServerId>org.mule.tooling.server.3.5.0.ee</muleServerId>
         <muleSchemaVersion>3.5.0.0</muleSchemaVersion>
-        <muleConfigVersion>EE-3.5.0</muleConfigVersion>
+        <muleConfigVersion>EE-3.5.1</muleConfigVersion>
     </properties>
 
     <build>
@@ -315,4 +315,3 @@
     </distributionManagement>
 
 </project>
-
