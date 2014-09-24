@@ -9,17 +9,17 @@
     <Loggers>
 
         <!-- CXF is used heavily by Mule for web services -->
-        <AsyncLogger name="org.apache.cxf" level="WARN"/>
+        <AsyncLogger level="WARN" name="org.apache.cxf"/>
 
         <!-- Apache Commons tend to make a lot of noise which can clutter the log-->
-        <AsyncLogger name="org.apache" level="WARN"/>
+        <AsyncLogger level="WARN" name="org.apache"/>
 
         <!-- Reduce startup noise -->
-        <AsyncLogger name="org.springframework.beans.factory" level="WARN"/>
+        <AsyncLogger level="WARN" name="org.springframework.beans.factory"/>
 
         <!-- Mule classes -->
-        <AsyncLogger name="org.mule" level="INFO"/>
-        <AsyncLogger name="com.mulesoft" level="INFO"/>
+        <AsyncLogger level="INFO" name="org.mule"/>
+        <AsyncLogger level="INFO" name="com.mulesoft"/>
 
         <AsyncRoot level="INFO">
             <AppenderRef ref="Console"/>
