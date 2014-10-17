@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%-5p %d [%t] %c: %m%n"/>
+        </Console>
+    </Appenders>
+
+    <Loggers>
+
+        <!-- CXF is used heavily by Mule for web services -->
+        <AsyncLogger level="WARN" name="org.apache.cxf"/>
+
+        <!-- Apache Commons tend to make a lot of noise which can clutter the log-->
+        <AsyncLogger level="WARN" name="org.apache"/>
+
+        <!-- Reduce startup noise -->
+        <AsyncLogger level="WARN" name="org.springframework.beans.factory"/>
+
+        <!-- Mule classes -->
+        <AsyncLogger level="INFO" name="org.mule"/>
+        <AsyncLogger level="INFO" name="com.mulesoft"/>
+
+        <AsyncRoot level="INFO">
+            <AppenderRef ref="Console"/>
+        </AsyncRoot>
+    </Loggers>
+
+</Configuration>
